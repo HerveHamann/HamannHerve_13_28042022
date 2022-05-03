@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+$color-1: #2c3e50;
+$color-2: #42b983;
+$color-3: #00bc77;
+$color-4: #ccc;
+$color-5: black;
+$color-6: #fff;
+$color-7: #12002b;
+
+html {
+  color: $color-1;
+}

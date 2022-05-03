@@ -1,0 +1,32 @@
+.main-nav {
+  padding: 5px 20px 1px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    max-width: 100%;
+    width: 200px;
+  }
+  .main-nav-item {
+    margin-top: -5px;
+    display: flex;
+    column-gap: 15px;
+    color: $color-1;
+    font-weight: bold;
+
+    margin-right: 8px;
+    .underline-text {
+      display: flex;
+      column-gap: 5px;
+      color: $color-1;
+    }
+  }
+  .sign-in {
+    column-gap: 5px;
+  }
+
+  .underline-text:hover {
+    text-decoration: underline;
+  }
+}
