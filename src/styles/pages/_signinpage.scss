@@ -1,10 +1,9 @@
-.user-page {
+.signpage {
   height: 100vh;
   display: flex;
   flex-direction: column;
   .main {
     flex: 1;
     background-color: $color-7;
-    height: 100;
   }
 }

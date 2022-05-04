@@ -1,0 +1,46 @@
+.header {
+  color: $color-6;
+  margin-bottom: 32px;
+  text-align: center;
+  .displayedheader {
+    h1 {
+      margin: 21.5px 0 21.5px 0;
+    }
+    .edit-button {
+      border-color: $color-3;
+      background-color: $color-3;
+      color: $color-6;
+      font-weight: bold;
+      padding: 10px;
+    }
+  }
+  .header-modifier {
+    h1 {
+      margin: 21.5px 0 21.5px 0;
+    }
+    .modifier-container {
+      margin: 21.5px 0 21.5px 0;
+      width: 500px;
+      flex-wrap: wrap;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px 20px;
+    }
+    input {
+      padding: 10px;
+    }
+    .edit-button {
+      width: 100px;
+      border-color: $color-3;
+      background-color: $color-3;
+      color: $color-6;
+      font-weight: bold;
+      padding: 10px;
+    }
+  }
+}
+.dispair-class {
+  display: none;
+}

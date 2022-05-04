@@ -6,7 +6,7 @@ import Form from "../components/Form";
 
 const SignInPage = () => {
   return (
-    <div className="user-page">
+    <div className="signpage">
       <Header />
       <div className="main">
         <Form />

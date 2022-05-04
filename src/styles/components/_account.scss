@@ -1,0 +1,40 @@
+.account {
+  display: flex;
+  align-items: space-between;
+  align-items: center;
+  border: 1px solid $color-5;
+  background-color: $color-6;
+  width: 80%;
+  height: 130px;
+  margin: 0 auto;
+  flex-direction: row;
+  padding: 24px;
+  box-sizing: border-box;
+  text-align: left;
+  margin-bottom: 32px;
+  .content-wrapper {
+    flex: 1;
+    .title {
+      font-size: 16px;
+      font-weight: normal;
+    }
+    .amount {
+      font-size: 40px;
+      font-weight: bold;
+    }
+  }
+  .cta {
+    flex: 0;
+    .transaction-button {
+      display: block;
+      width: 200px;
+      padding: 8px;
+      font-size: 17.6px;
+      font-weight: bold;
+      margin-top: 16px;
+      border-color: $color-3;
+      background-color: $color-3;
+      color: $color-6;
+    }
+  }
+}

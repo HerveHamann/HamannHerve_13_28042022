@@ -4,19 +4,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle, faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 
-const Header = ({ user }) => {
+const Header = ({ firstNameUser }) => {
   return (
     <div>
       <nav className="main-nav">
         <NavLink to="/">
           <img src={argentBankLogo} alt="Logo Argent Bank" />
         </NavLink>
-        {user ? (
+        {firstNameUser ? (
           <div className="main-nav-item">
             <NavLink to="/user">
               <div className="underline-text">
                 <FontAwesomeIcon icon={faUserCircle} />
-                {user}
+                {firstNameUser}
               </div>
             </NavLink>
             <NavLink to="/">
