@@ -4,10 +4,33 @@ import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import UserHeader from "../components/UserHeader";
 
+// import { useSelector } from "react-redux";
+
 const firstNameUser = "Hervé";
 const surenameNameUser = "Hamann";
 
 const UserPage = () => {
+  // const state = useSelector((state) => state.token.token);
+  // const options = {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //     Authorization: "Bearer" + state,
+  //   },
+  // };
+
+  // async function GetProfile() {
+  //   await fetch("http://localhost:3001/api/v1/user/profile", options).then((res) =>
+  //     res.json().then((res) => {
+  //       if (res.status === 200) {
+  //         console.log(res.body);
+  //       } else {
+  //         alert(res.message);
+  //       }
+  //     })
+  //   );
+  // }
+  // GetProfile();
   return (
     <div className="user-page">
       <Header firstNameUser={firstNameUser} />

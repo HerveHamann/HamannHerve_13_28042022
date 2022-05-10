@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import SignInPage from "./pages/SignInPage";
 import UserPage from "./pages/UserPage";
 import { Provider } from "react-redux";
-import { store } from "./redux";
+import store from "./utils/store";
 const App = () => {
   return (
     <Provider store={store}>
