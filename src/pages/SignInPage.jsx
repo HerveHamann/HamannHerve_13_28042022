@@ -8,11 +8,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchOrUpdateToken } from "../features/getToken";
 import { selectToken } from "../utils/selectors";
 import { useNavigate } from "react-router-dom";
-// import { getToken, SendIdentifiersAndGetToken } from "../redux";
 
 const SignInPage = () => {
   const token = useSelector(selectToken);
-  console.log(token);
+  // console.log(token);
   const dispatch = useDispatch();
   let navigate = useNavigate();
 
@@ -66,24 +65,3 @@ const SignInPage = () => {
 };
 
 export default SignInPage;
-
-// const options = {
-//   method: "POST",
-//   headers: {
-//     "Content-Type": "application/json",
-//   },
-//   body: JSON.stringify(identifiers),
-// };
-
-// async function SendIdentifiers() {
-//   await fetch("http://localhost:3001/api/v1/user/login", options).then((res) =>
-//     res.json().then((res) => {
-//       if (res.status === 200) {
-//         dispatch(getToken(res.body.token));
-//         navigate("/user");
-//       } else {
-//         alert(res.message);
-//       }
-//     })
-//   );
-// }

@@ -3,34 +3,22 @@ import Account from "../components/Account";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import UserHeader from "../components/UserHeader";
-
-// import { useSelector } from "react-redux";
-
-const firstNameUser = "Hervé";
-const surenameNameUser = "Hamann";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchOrUpdateUser } from "../features/getUser";
+import { selectToken } from "../utils/selectors";
+import { selectUser } from "../utils/selectors";
 
 const UserPage = () => {
-  // const state = useSelector((state) => state.token.token);
-  // const options = {
-  //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //     Authorization: "Bearer" + state,
-  //   },
-  // };
-
-  // async function GetProfile() {
-  //   await fetch("http://localhost:3001/api/v1/user/profile", options).then((res) =>
-  //     res.json().then((res) => {
-  //       if (res.status === 200) {
-  //         console.log(res.body);
-  //       } else {
-  //         alert(res.message);
-  //       }
-  //     })
-  //   );
-  // }
-  // GetProfile();
+  const token = useSelector(selectToken);
+  const user = useSelector(selectUser);
+  console.log(user);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchOrUpdateUser(token));
+  }, [dispatch, token]);
+  const firstNameUser = user.data?.body.firstName;
+  const surenameNameUser = user.data?.body.lastName;
   return (
     <div className="user-page">
       <Header firstNameUser={firstNameUser} />
@@ -46,3 +34,25 @@ const UserPage = () => {
 };
 
 export default UserPage;
+
+// const state = useSelector((state) => state.token.token);
+// const options = {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//     Authorization: "Bearer" + state,
+//   },
+// };
+
+// async function GetProfile() {
+//   await fetch("http://localhost:3001/api/v1/user/profile", options).then((res) =>
+//     res.json().then((res) => {
+//       if (res.status === 200) {
+//         console.log(res.body);
+//       } else {
+//         alert(res.message);
+//       }
+//     })
+//   );
+// }
+// GetProfile();
