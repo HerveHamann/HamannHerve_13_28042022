@@ -14,11 +14,14 @@ const UserPage = () => {
   const user = useSelector(selectUser);
   console.log(user);
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchOrUpdateUser(token));
   }, [dispatch, token]);
+
   const firstNameUser = user.data?.body.firstName;
   const surenameNameUser = user.data?.body.lastName;
+
   return (
     <div className="user-page">
       <Header firstNameUser={firstNameUser} />

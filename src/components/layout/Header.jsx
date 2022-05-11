@@ -3,8 +3,12 @@ import argentBankLogo from "../../assets/img/argentBankLogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle, faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
+import { resetToken } from "../../features/getToken";
+import { useDispatch } from "react-redux";
 
 const Header = ({ firstNameUser }) => {
+  const dispatch = useDispatch();
+
   return (
     <div>
       <nav className="main-nav">
@@ -20,7 +24,11 @@ const Header = ({ firstNameUser }) => {
               </div>
             </NavLink>
             <NavLink to="/">
-              <div className="underline-text">
+              <div
+                className="underline-text"
+                onClick={() => {
+                  dispatch(resetToken());
+                }}>
                 <FontAwesomeIcon icon={faRightFromBracket} />
                 Sign Out
               </div>

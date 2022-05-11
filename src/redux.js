@@ -20,7 +20,7 @@ export const store = configureStore({
   },
 });
 
-// import { getToken, SendIdentifiersAndGetToken } from "../redux";
+// import { getToken } from "../redux";
 
 // const options = {
 //   method: "POST",
