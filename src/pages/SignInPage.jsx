@@ -11,7 +11,6 @@ import { useNavigate } from "react-router-dom";
 
 const SignInPage = () => {
   const token = useSelector(selectToken);
-  console.log(token);
   const dispatch = useDispatch();
   let navigate = useNavigate();
 

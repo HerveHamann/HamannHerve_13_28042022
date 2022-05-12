@@ -19,3 +19,14 @@ $color-7: #12002b;
 html {
   color: $color-1;
 }
+
+@mixin minDesktop {
+  @media screen and (max-width: 920px) {
+    @content;
+  }
+}
+@mixin minTablet {
+  @media screen and (max-width: 720px) {
+    @content;
+  }
+}

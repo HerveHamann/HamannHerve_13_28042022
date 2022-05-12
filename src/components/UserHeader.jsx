@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectToken } from "../utils/selectors";
-import { selectEditedNames } from "../utils/selectors";
 import { sendEditedUserNames } from "../features/sendUser";
 import { fetchOrUpdateUser } from "../features/getUser";
 
@@ -10,10 +9,9 @@ const UserHeader = ({ firstNameUser, surenameNameUser }) => {
   const [editedFirstName, seteditedFirstName] = useState("");
   const [editedLastName, seteditedLastName] = useState("");
   const editedUserNames = { firstName: editedFirstName, lastName: editedLastName };
-  console.log(editedUserNames);
+
   const token = useSelector(selectToken);
-  const editedNames = useSelector(selectEditedNames);
-  console.log(editedNames);
+
   const dispatch = useDispatch();
 
   const handleSubmit = () => {

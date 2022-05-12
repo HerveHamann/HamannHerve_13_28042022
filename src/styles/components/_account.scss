@@ -5,15 +5,21 @@
   border: 1px solid $color-5;
   background-color: $color-6;
   width: 80%;
-  height: 130px;
   margin: 0 auto;
   flex-direction: row;
   padding: 24px;
   box-sizing: border-box;
   text-align: left;
   margin-bottom: 32px;
+
+  @include minTablet() {
+    flex-direction: column;
+  }
+
   .content-wrapper {
+    width: 100%;
     flex: 1;
+
     .title {
       font-size: 16px;
       font-weight: normal;
@@ -25,6 +31,10 @@
   }
   .cta {
     flex: 0;
+    @include minTablet() {
+      flex: unset;
+      width: 100%;
+    }
     .transaction-button {
       display: block;
       width: 200px;
@@ -35,6 +45,9 @@
       border-color: $color-3;
       background-color: $color-3;
       color: $color-6;
+      @include minTablet() {
+        width: 100%;
+      }
     }
   }
 }
