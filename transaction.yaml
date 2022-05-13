@@ -41,7 +41,7 @@ paths:
       security:
       - Bearer: []
   
-  /user/transaction/category:
+  /user/transaction/{id}/category:
     put:
       tags:
       - "User Transaction"
@@ -64,6 +64,11 @@ paths:
         schema:
           $ref: "#/definitions/Category"
         required: true
+      - name: "id"
+        in: "path"
+        description: "id of the transaction needed to be updated"
+        required: true
+        type: "string"
       responses:
         "200":
           description: "Category updated successfully"
@@ -76,7 +81,7 @@ paths:
       security:
       - Bearer: []
   
-  /user/transaction/note:
+  /user/transaction/{id}/note:
     put:
       tags:
       - "User Transaction"
@@ -99,6 +104,11 @@ paths:
         schema:
           $ref: "#/definitions/Note"
         required: true
+      - name: "id"
+        in: "path"
+        description: "id of the transaction needed to be updated"
+        required: true
+        type: "string"
       responses:
         "200":
           description: "Note updated successfully"
