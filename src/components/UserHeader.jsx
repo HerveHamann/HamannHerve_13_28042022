@@ -13,10 +13,13 @@ const UserHeader = ({ firstNameUser, surenameNameUser }) => {
   const token = useSelector(selectToken);
 
   const dispatch = useDispatch();
-
+  const RefreshPage = () => {
+    dispatch(fetchOrUpdateUser(token));
+  };
   const handleSubmit = () => {
     dispatch(sendEditedUserNames(token, editedUserNames));
-    dispatch(fetchOrUpdateUser(token));
+    setTimeout(RefreshPage, 50);
+
     setEdit(false);
   };
 
